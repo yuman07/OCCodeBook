@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A20D016294DBA810076F89A /* YMObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A20D015294DBA810076F89A /* YMObject.m */; };
+		7A20D019294DBAD50076F89A /* YMObject+AssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A20D018294DBAD50076F89A /* YMObject+AssociatedObject.m */; };
+		7A20D01C294DD8D70076F89A /* YMOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A20D01B294DD8D70076F89A /* YMOperation.m */; };
 		7A9CC09D2920C38300046466 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CC09C2920C38300046466 /* AppDelegate.m */; };
 		7A9CC0A02920C38300046466 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CC09F2920C38300046466 /* SceneDelegate.m */; };
 		7A9CC0A32920C38300046466 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CC0A22920C38300046466 /* ViewController.m */; };
@@ -17,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A20D014294DBA810076F89A /* YMObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMObject.h; sourceTree = "<group>"; };
+		7A20D015294DBA810076F89A /* YMObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMObject.m; sourceTree = "<group>"; };
+		7A20D017294DBAD50076F89A /* YMObject+AssociatedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YMObject+AssociatedObject.h"; sourceTree = "<group>"; };
+		7A20D018294DBAD50076F89A /* YMObject+AssociatedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YMObject+AssociatedObject.m"; sourceTree = "<group>"; };
+		7A20D01A294DD8D70076F89A /* YMOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMOperation.h; sourceTree = "<group>"; };
+		7A20D01B294DD8D70076F89A /* YMOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMOperation.m; sourceTree = "<group>"; };
 		7A9CC0982920C38300046466 /* OCCodeBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCCodeBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A9CC09B2920C38300046466 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7A9CC09C2920C38300046466 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +51,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A20D00D294DB7B20076F89A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7A20D014294DBA810076F89A /* YMObject.h */,
+				7A20D015294DBA810076F89A /* YMObject.m */,
+				7A20D017294DBAD50076F89A /* YMObject+AssociatedObject.h */,
+				7A20D018294DBAD50076F89A /* YMObject+AssociatedObject.m */,
+				7A20D01A294DD8D70076F89A /* YMOperation.h */,
+				7A20D01B294DD8D70076F89A /* YMOperation.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		7A9CC08F2920C38300046466 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +85,7 @@
 			children = (
 				7A9CC0A12920C38300046466 /* ViewController.h */,
 				7A9CC0A22920C38300046466 /* ViewController.m */,
+				7A20D00D294DB7B20076F89A /* Sources */,
 				7A9CC0B42920C3A400046466 /* Support */,
 				7A9CC0AC2920C38400046466 /* Info.plist */,
 			);
@@ -154,8 +177,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A20D016294DBA810076F89A /* YMObject.m in Sources */,
 				7A9CC0A32920C38300046466 /* ViewController.m in Sources */,
+				7A20D019294DBAD50076F89A /* YMObject+AssociatedObject.m in Sources */,
 				7A9CC09D2920C38300046466 /* AppDelegate.m in Sources */,
+				7A20D01C294DD8D70076F89A /* YMOperation.m in Sources */,
 				7A9CC0AE2920C38400046466 /* main.m in Sources */,
 				7A9CC0A02920C38300046466 /* SceneDelegate.m in Sources */,
 			);
