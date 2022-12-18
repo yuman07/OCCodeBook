@@ -28,7 +28,7 @@ static void * const kSelfClassKVOContext = (void*)&kSelfClassKVOContext;
     self.name = @"ori";
     
     // Do any additional setup after loading the view.
-    [self stringEmoji];
+    
 }
 
 // KVO

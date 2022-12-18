@@ -7,8 +7,24 @@
 
 #import <Foundation/Foundation.h>
 
+#define TSWeakify(var) \
+    __weak typeof(var) TSWeak_##var = var;
+
+#define TSStrongify(var) \
+    _Pragma("clang diagnostic push") \
+    _Pragma("clang diagnostic ignored \"-Wshadow\"") \
+    __strong typeof(var) var = TSWeak_##var; \
+    _Pragma("clang diagnostic pop")
+
+#define TSStrongifyAndReturnValueIfNil(var, ret) \
+    TSStrongify(var) \
+    if (!var) { return ret; }
+
+#define TSStrongifyAndReturnIfNil(var) \
+    TSStrongifyAndReturnValueIfNil(var, )
+
 #define RUN_BLOCK(block, ...) \
-do{ __typeof__(block) __a__ = (block); if (__a__) {__a__(__VA_ARGS__);} }while(0)
+    do{ __typeof__(block) __a__ = (block); if (__a__) {__a__(__VA_ARGS__);} }while(0)
 
 // 定义枚举：
 typedef NS_ENUM(NSInteger, YMViewAnimationTransition) {
