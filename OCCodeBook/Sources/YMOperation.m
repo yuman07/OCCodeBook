@@ -7,11 +7,9 @@
 
 #import "YMOperation.h"
 
-@interface YMOperation ()
+@interface YMOperation()
 
-@property (nonatomic, assign) BOOL isCancel;
-@property (nonatomic, assign, getter=isExecuting) BOOL executing;
-@property (nonatomic, assign, getter=isFinished) BOOL finished;
+@property (nonatomic, strong) NSString *result;
 
 @end
 
@@ -20,39 +18,30 @@
 @synthesize executing = _executing;
 @synthesize finished = _finished;
 
+#pragma mark --- base methods
+
 - (void)start
 {
     [self setupFinishBlock];
     
     if (self.isCancelled) {
-        self.isCancel = YES;
-        [self done];
+        [self complete];
         return;
     }
     
-    self.executing = YES;
+    @synchronized(self) {
+        self.finished = NO;
+        self.executing = YES;
+    }
+    
     [self executeOperation];
 }
 
-- (void)executeOperation
-{
-    // 执行一个异步任务
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self done];
-    });
-}
-
-#pragma mark --- base methods
 - (void)setExecuting:(BOOL)executing
 {
     [self willChangeValueForKey:@"isExecuting"];
     _executing = executing;
     [self didChangeValueForKey:@"isExecuting"];
-}
-
-- (BOOL)isExecuting
-{
-    return _executing;
 }
 
 - (void)setFinished:(BOOL)finished
@@ -62,34 +51,42 @@
     [self didChangeValueForKey:@"isFinished"];
 }
 
-- (BOOL)isFinished
-{
-    return _finished;
-}
-
 - (BOOL)isAsynchronous
 {
     return YES;
 }
 
-- (void)done
+- (void)complete
 {
-    self.executing = NO;
-    self.finished = YES;
+    @synchronized(self) {
+        if (!self.isFinished) {
+            self.executing = NO;
+            self.finished = YES;
+        }
+    }
 }
 
 - (void)setupFinishBlock
 {
-    if (!self.finishBlock) {
-        return;
-    }
     __weak __typeof__(self) weakSelf = self;
     self.completionBlock = ^{
         __strong __typeof__(self) self = weakSelf;
         if (self.finishBlock) {
-            self.finishBlock(self.isCancel, @"value");
+            self.finishBlock(self.result);
         }
     };
+}
+
+- (void)executeOperation
+{
+    // 执行一个异步任务
+    __weak __typeof__(self) weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        __strong __typeof__(self) self = weakSelf;
+        if (!self || self.isCancelled) { return [self complete]; }
+        self.result = @"returnResult";
+        [self complete];
+    });
 }
 
 @end

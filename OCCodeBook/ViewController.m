@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "YMObject.h"
+#import "YMOperation.h"
 
 static void * const kSelfClassKVOContext = (void*)&kSelfClassKVOContext;
 

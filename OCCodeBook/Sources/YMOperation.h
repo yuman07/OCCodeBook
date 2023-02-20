@@ -7,15 +7,11 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface YMOperation : NSOperation
 
 // 使用这个代替completionBlock
-// isCancel标志该op是否被cancel导致全不执行
+// 注意无论该Op是否被取消，最终都会调用finishBlock. 记得使用op.isCancelled去判断
 // 该回调一定运行在'子'线程
-@property (nonatomic, copy) void (^finishBlock)(BOOL isCancel, NSString *value);
+@property (nonatomic, copy) void (^finishBlock)(NSString *value);
 
 @end
-
-NS_ASSUME_NONNULL_END
