@@ -17,6 +17,7 @@
 
 @synthesize executing = _executing;
 @synthesize finished = _finished;
+@synthesize cancelled = _cancelled;
 
 #pragma mark --- base methods
 
@@ -37,18 +38,44 @@
     [self executeOperation];
 }
 
+- (BOOL)isExecuting
+{
+    @synchronized(self) {
+        return _executing;
+    }
+}
+
+- (BOOL)isFinished
+{
+    @synchronized(self) {
+        return _finished;
+    }
+}
+
+- (BOOL)isCancelled
+{
+    @synchronized(self) {
+        return _cancelled;
+    }
+}
+
 - (void)setExecuting:(BOOL)executing
 {
     [self willChangeValueForKey:@"isExecuting"];
-    _executing = executing;
+    @synchronized(self) { _executing = executing; }
     [self didChangeValueForKey:@"isExecuting"];
 }
 
 - (void)setFinished:(BOOL)finished
 {
     [self willChangeValueForKey:@"isFinished"];
-    _finished = finished;
+    @synchronized(self) { _finished = finished; }
     [self didChangeValueForKey:@"isFinished"];
+}
+
+- (void)cancel
+{
+    @synchronized(self) { _cancelled = YES; }
 }
 
 - (BOOL)isAsynchronous
@@ -65,6 +92,8 @@
         }
     }
 }
+
+#pragma mark --- custom methods
 
 - (void)setupFinishBlock
 {
