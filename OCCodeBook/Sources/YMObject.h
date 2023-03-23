@@ -44,6 +44,7 @@ typedef void(^YMPersonCompletionBlock)(void);
 
 NS_ASSUME_NONNULL_BEGIN
 
+// m定义，h暴露：
 FOUNDATION_EXPORT NSString * const YMObjectXXXString;
 
 FOUNDATION_EXPORT CGFloat const YMObjectXXXHeight;
