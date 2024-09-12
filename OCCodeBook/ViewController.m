@@ -18,6 +18,8 @@ static void * const kSelfClassKVOContext = (void*)&kSelfClassKVOContext;
 
 @property (nonatomic, strong) NSMutableArray *array;
 
+@property (nonatomic, strong) dispatch_queue_t ymQueue;
+
 @end
 
 @implementation ViewController
@@ -29,6 +31,17 @@ static void * const kSelfClassKVOContext = (void*)&kSelfClassKVOContext;
     
     // Do any additional setup after loading the view.
     
+}
+
+- (void)useQueue
+{
+    self.ymQueue = dispatch_queue_create("com.ymQueue.serial", DISPATCH_QUEUE_SERIAL);
+    
+    self.ymQueue = dispatch_queue_create("com.ymQueue.concurrent", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+    
+    dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 }
 
 // KVO
