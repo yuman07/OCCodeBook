@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -137,7 +137,6 @@
 				};
 			};
 			buildConfigurationList = 7A9CC0932920C38300046466 /* Build configuration list for PBXProject "OCCodeBook" */;
-			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -145,6 +144,7 @@
 				Base,
 			);
 			mainGroup = 7A9CC08F2920C38300046466;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 7A9CC0992920C38300046466 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
