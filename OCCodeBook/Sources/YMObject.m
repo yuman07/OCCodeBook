@@ -44,6 +44,7 @@ static NSString *_name = nil;
 
 - (NSInteger)doSomeThingWithName:(NSString *)name age:(NSUInteger)age birthday:(NSDate *)birthday
 {
+    NSLog(@"%@", @(kXXXHeight));
     NSLog(@"%@", name);
     NSLog(@"%@", @(age));
     NSLog(@"%@", birthday);

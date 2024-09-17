@@ -42,6 +42,8 @@ static void * const kSelfClassKVOContext = (void*)&kSelfClassKVOContext;
     dispatch_queue_t mainQueue = dispatch_get_main_queue();
     
     dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    NSLog(@"%@ %@", mainQueue, globalQueue);
 }
 
 // KVO
