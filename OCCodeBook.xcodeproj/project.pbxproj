@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 90;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -40,10 +40,8 @@
 /* Begin PBXFrameworksBuildPhase section */
 		7A9CC0952920C38300046466 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -115,8 +113,6 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			name = OCCodeBook;
 			productName = OCCodeBook;
 			productReference = 7A9CC0982920C38300046466 /* OCCodeBook.app */;
@@ -144,7 +140,7 @@
 				Base,
 			);
 			mainGroup = 7A9CC08F2920C38300046466;
-			preferredProjectObjectVersion = 77;
+			preferredProjectObjectVersion = 90;
 			productRefGroup = 7A9CC0992920C38300046466 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -157,20 +153,17 @@
 /* Begin PBXResourcesBuildPhase section */
 		7A9CC0962920C38300046466 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				7A9CC0AB2920C38400046466 /* LaunchScreen.storyboard in Resources */,
 				7A9CC0A82920C38400046466 /* Assets.xcassets in Resources */,
 				7A9CC0A62920C38300046466 /* Main.storyboard in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7A9CC0942920C38300046466 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				7A20D016294DBA810076F89A /* YMObject.m in Sources */,
 				7A9CC0A32920C38300046466 /* ViewController.m in Sources */,
@@ -179,7 +172,6 @@
 				7A9CC0AE2920C38400046466 /* main.m in Sources */,
 				7A9CC0A02920C38300046466 /* SceneDelegate.m in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
@@ -203,7 +195,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7A9CC0AF2920C38400046466 /* Debug */ = {
+		7A9CC0AF2920C38400046466 /* Debug configuration for PBXProject "OCCodeBook" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -264,7 +256,7 @@
 			};
 			name = Debug;
 		};
-		7A9CC0B02920C38400046466 /* Release */ = {
+		7A9CC0B02920C38400046466 /* Release configuration for PBXProject "OCCodeBook" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -319,7 +311,7 @@
 			};
 			name = Release;
 		};
-		7A9CC0B22920C38400046466 /* Debug */ = {
+		7A9CC0B22920C38400046466 /* Debug configuration for PBXNativeTarget "OCCodeBook" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -348,7 +340,7 @@
 			};
 			name = Debug;
 		};
-		7A9CC0B32920C38400046466 /* Release */ = {
+		7A9CC0B32920C38400046466 /* Release configuration for PBXNativeTarget "OCCodeBook" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -383,19 +375,17 @@
 		7A9CC0932920C38300046466 /* Build configuration list for PBXProject "OCCodeBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7A9CC0AF2920C38400046466 /* Debug */,
-				7A9CC0B02920C38400046466 /* Release */,
+				7A9CC0AF2920C38400046466 /* Debug configuration for PBXProject "OCCodeBook" */,
+				7A9CC0B02920C38400046466 /* Release configuration for PBXProject "OCCodeBook" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		7A9CC0B12920C38400046466 /* Build configuration list for PBXNativeTarget "OCCodeBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7A9CC0B22920C38400046466 /* Debug */,
-				7A9CC0B32920C38400046466 /* Release */,
+				7A9CC0B22920C38400046466 /* Debug configuration for PBXNativeTarget "OCCodeBook" */,
+				7A9CC0B32920C38400046466 /* Release configuration for PBXNativeTarget "OCCodeBook" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
