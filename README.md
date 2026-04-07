@@ -72,4 +72,4 @@ OCCodeBook/
 
 ## License
 
-This project is open source for learning and reference purposes.
+This project is licensed under the [MIT License](LICENSE).
