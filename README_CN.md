@@ -77,10 +77,6 @@ OCCodeBook/
 
 欢迎提交 Issue 和 Pull Request！如果你有更多实用的 Objective-C 编程模式或最佳实践，欢迎一起完善这本代码手册。
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=yuman07/OCCodeBook&type=Date)](https://star-history.com/#yuman07/OCCodeBook&Date)
-
 ## 许可证
 
 本项目基于 [MIT License](LICENSE) 开源。
