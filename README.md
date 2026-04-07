@@ -1,5 +1,10 @@
 # OCCodeBook
 
+[![Language](https://img.shields.io/badge/language-Objective--C-blue.svg)](https://developer.apple.com/documentation/objectivec)
+[![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://developer.apple.com/ios/)
+[![License](https://img.shields.io/github/license/yuman07/OCCodeBook)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/yuman07/OCCodeBook?style=social)](https://github.com/yuman07/OCCodeBook/stargazers)
+
 [中文文档](README_CN.md)
 
 **OCCodeBook** is an Objective-C code reference book in the form of an iOS project. It collects commonly used Objective-C programming patterns and advanced features for quick lookup during daily development.
@@ -69,6 +74,14 @@ OCCodeBook/
    ```
 2. Open `OCCodeBook.xcodeproj` in Xcode
 3. Browse the source files and comments for examples
+
+## Contributing
+
+Issues and Pull Requests are welcome! If you have additional Objective-C patterns or best practices to share, feel free to contribute.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=yuman07/OCCodeBook&type=Date)](https://star-history.com/#yuman07/OCCodeBook&Date)
 
 ## License
 

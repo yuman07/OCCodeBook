@@ -1,5 +1,10 @@
 # OCCodeBook
 
+[![Language](https://img.shields.io/badge/language-Objective--C-blue.svg)](https://developer.apple.com/documentation/objectivec)
+[![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://developer.apple.com/ios/)
+[![License](https://img.shields.io/github/license/yuman07/OCCodeBook)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/yuman07/OCCodeBook?style=social)](https://github.com/yuman07/OCCodeBook/stargazers)
+
 **OCCodeBook** 是一个 Objective-C 代码手册，以 iOS 工程的形式收录了常用的 Objective-C 编程模式与高级特性示例，方便日常开发时快速查阅。
 
 ## 涵盖内容
@@ -67,3 +72,15 @@ OCCodeBook/
    ```
 2. 用 Xcode 打开 `OCCodeBook.xcodeproj`
 3. 阅读各源文件中的代码与注释
+
+## 参与贡献
+
+欢迎提交 Issue 和 Pull Request！如果你有更多实用的 Objective-C 编程模式或最佳实践，欢迎一起完善这本代码手册。
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=yuman07/OCCodeBook&type=Date)](https://star-history.com/#yuman07/OCCodeBook&Date)
+
+## 许可证
+
+本项目基于 [MIT License](LICENSE) 开源。
