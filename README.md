@@ -57,8 +57,8 @@ OCCodeBook/
 
 ## Requirements
 
-- Xcode 15+
-- iOS 17.0+
+- Xcode 26.0+
+- iOS 26.0+
 - No third-party dependencies — pure Foundation / UIKit
 
 ## Getting Started

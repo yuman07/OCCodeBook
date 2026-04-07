@@ -55,8 +55,8 @@ OCCodeBook/
 
 ## 环境要求
 
-- Xcode 15+
-- iOS 17.0+
+- Xcode 26.0+
+- iOS 26.0+
 - 无第三方依赖，纯 Foundation / UIKit
 
 ## 使用方式
